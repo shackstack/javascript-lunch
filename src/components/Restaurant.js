@@ -1,4 +1,4 @@
-import { CLASS, TRANSLATE_CATEGORY } from "../constant/variables";
+import { CLASS, EVENT_TYPE, TRANSLATE_CATEGORY } from "../constant/variables";
 import Modal from "./Modal";
 import Star from "./Star";
 
@@ -55,7 +55,7 @@ export default class Restaurant {
   setEvent() {
     const { name, render } = this.props;
     this.$restaurantItem = this.$target.querySelector(`#${name}`);
-    this.$restaurantItem.addEventListener("click", () => {
+    this.$restaurantItem.addEventListener(EVENT_TYPE.CLICK, () => {
       new Modal(this.$modal, { ...this.props, content: "restaurantDetail", render });
       this.$modal.classList.toggle(CLASS.MODAL_OPEN);
     });

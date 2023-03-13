@@ -1,3 +1,4 @@
+import { EVENT_TYPE } from "../constant/variables";
 import { addEvent } from "../util/addEvent";
 
 export default class Filter {
@@ -36,12 +37,12 @@ export default class Filter {
     const { setState } = this.props;
 
     const $sortingFilter = this.$target.querySelector("#sorting-filter");
-    addEvent($sortingFilter, "change", (e) => {
+    addEvent($sortingFilter, EVENT_TYPE.CHANGE, (e) => {
       setState({ sortingWay: e.target.value });
     });
 
     const $categoryFilter = this.$target.querySelector("#category-filter");
-    addEvent($categoryFilter, "change", (e) => {
+    addEvent($categoryFilter, EVENT_TYPE.CHANGE, (e) => {
       setState({ category: e.target.value });
     });
   }

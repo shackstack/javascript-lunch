@@ -1,3 +1,4 @@
+import { EVENT_TYPE } from "../constant/variables";
 import { addEvent } from "../util/addEvent";
 import store from "../util/store";
 import Modal from "./Modal";
@@ -21,7 +22,7 @@ export default class Star {
 
   setEvent() {
     const $starIcon = this.$target.querySelector(".star-icon");
-    addEvent($starIcon, "click", () => this.toggleStar());
+    addEvent($starIcon, EVENT_TYPE.CLICK, () => this.toggleStar());
   }
 
   toggleStar() {

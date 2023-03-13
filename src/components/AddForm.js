@@ -1,4 +1,4 @@
-import { CLASS } from "../constant/variables";
+import { CLASS, EVENT_TYPE } from "../constant/variables";
 import Validator from "../domain/Validator";
 import { addEvent } from "../util/addEvent";
 import store from "../util/store";
@@ -97,12 +97,12 @@ export default class AddForm {
     const $modal = document.querySelector(".modal");
 
     const $cancelButton = this.$target.querySelector("#cancel-button");
-    addEvent($cancelButton, "click", () => {
+    addEvent($cancelButton, EVENT_TYPE.CLICK, () => {
       $modal.classList.toggle(CLASS.MODAL_OPEN);
     });
 
     const $addRestaurantForm = this.$target.querySelector("#add-restaurant-form");
-    addEvent($addRestaurantForm, "submit", (event) => {
+    addEvent($addRestaurantForm, EVENT_TYPE.SUBMIT, (event) => {
       event.preventDefault();
 
       const category = event.target[0].value;

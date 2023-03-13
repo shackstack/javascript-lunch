@@ -1,4 +1,4 @@
-import { CLASS, CONTENT } from "../constant/variables";
+import { CLASS, CONTENT, EVENT_TYPE } from "../constant/variables";
 import { addEvent } from "../util/addEvent";
 import AddForm from "./AddForm";
 import RestaurantDetail from "./RestaurantDetail";
@@ -35,7 +35,7 @@ export default class Modal {
     const $modal = document.querySelector(".modal");
 
     const $modalBackdrop = this.$target.querySelector(".modal-backdrop");
-    addEvent($modalBackdrop, "click", () => {
+    addEvent($modalBackdrop, EVENT_TYPE.CLICK, () => {
       $modal.classList.toggle(CLASS.MODAL_OPEN);
     });
   }

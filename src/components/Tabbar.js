@@ -1,4 +1,4 @@
-import { TAB } from "../constant/variables";
+import { EVENT_TYPE, TAB } from "../constant/variables";
 import { addEvent } from "../util/addEvent";
 
 export default class Tabbar {
@@ -34,14 +34,14 @@ export default class Tabbar {
     const { setState, tab } = this.props;
 
     const $allRestaurants = this.$target.querySelector("#all-restaurants");
-    addEvent($allRestaurants, "click", () => {
+    addEvent($allRestaurants, EVENT_TYPE.CLICK, () => {
       if (tab === "favorite-restaurants") {
         setState({ tab: TAB.ALL });
       }
     });
 
     const $favoriteRestaurants = this.$target.querySelector("#favorite-restaurants");
-    addEvent($favoriteRestaurants, "click", () => {
+    addEvent($favoriteRestaurants, EVENT_TYPE.CLICK, () => {
       if (tab === "all-restaurants") {
         setState({ tab: TAB.FAVORITE });
       }

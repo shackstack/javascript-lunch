@@ -1,4 +1,4 @@
-import { CATEGORY, CATEGORY_LOWER_CASE, SORTINGWAY } from "../constant/variables";
+import { CATEGORY, CATEGORY_LOWER_CASE, EVENT_TYPE, SORTINGWAY } from "../constant/variables";
 
 export type CategoryType = (typeof CATEGORY)[keyof typeof CATEGORY];
 
@@ -10,9 +10,7 @@ export type CategoryLowerCaseType = (typeof CATEGORY_LOWER_CASE)[keyof typeof CA
 
 export type EventHandler = (event: Event) => void;
 
-const EventTypes = ["click", "submit", "change", "keydown"] as const;
-
-export type EventType = (typeof EventTypes)[number];
+export type EventType = (typeof EVENT_TYPE)[keyof typeof EVENT_TYPE];
 export interface RestaurantInfo {
   name: string;
   category: CategoryType;

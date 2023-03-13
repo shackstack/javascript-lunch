@@ -36,3 +36,10 @@ export const TAB = {
   ALL: "all-restaurants",
   FAVORITE: "favorite-restaurants",
 } as const;
+
+export const EVENT_TYPE = {
+  CLICK: "click",
+  SUBMIT: "submit",
+  KEYUP: "keyup",
+  CHANGE: "change",
+};

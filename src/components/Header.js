@@ -1,4 +1,4 @@
-import { CLASS } from "../constant/variables";
+import { CLASS, EVENT_TYPE } from "../constant/variables";
 import { addEvent } from "../util/addEvent";
 import Modal from "./Modal";
 
@@ -26,7 +26,7 @@ export default class Header {
 
   setEvent() {
     const $button = this.$target.querySelector(".gnb__button");
-    addEvent($button, "click", () => this.toggleModal());
+    addEvent($button, EVENT_TYPE.CLICK, () => this.toggleModal());
   }
 
   toggleModal() {
