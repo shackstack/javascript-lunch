@@ -1,4 +1,4 @@
-import { translateCategory } from "../constant/variables";
+import { TRANSLATE_CATEGORY } from "../constant/variables";
 import { addEvent } from "../util/addEvent";
 import store from "../util/store";
 import Star from "./Star";
@@ -14,11 +14,11 @@ export default class RestaurantDetail {
   template() {
     const { category, name, distance, description, link } = this.props;
 
-    return `
+    return /*html*/ ` 
 <div>
   <div class="flex justify-between">
     <div class="restaurant__category">
-      <img src="./category-${translateCategory[category]}.png" alt="${category}" class="category-icon" />
+      <img src="./category-${TRANSLATE_CATEGORY[category]}.png" alt="${category}" class="category-icon" />
     </div>
     <div class="star-container"></div>
   </div>

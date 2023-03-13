@@ -14,7 +14,7 @@ export const CATEGORY_LOWER_CASE = Object.fromEntries(
   Object.entries(CATEGORY).map(([key, value]) => [key, key.toLowerCase()])
 );
 
-export const translateCategory = Object.fromEntries(
+export const TRANSLATE_CATEGORY = Object.fromEntries(
   Object.entries(CATEGORY).map(([key, value]) => [value, key.toLowerCase()])
 );
 

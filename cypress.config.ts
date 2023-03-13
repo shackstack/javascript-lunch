@@ -7,8 +7,8 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
+    baseUrl: BASE_URL,
     viewportWidth: 375,
     viewportHeight: 812,
-    baseUrl: BASE_URL,
   },
 });

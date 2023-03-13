@@ -1,4 +1,4 @@
-import { translateCategory } from "../constant/variables";
+import { TRANSLATE_CATEGORY } from "../constant/variables";
 import Modal from "./Modal";
 import Star from "./Star";
 
@@ -14,7 +14,7 @@ export default class Restaurant {
   template() {
     const { name, category, distance, description } = this.props;
 
-    return `
+    return /*html*/ `
     <li>
         <div class="relative">
          <div class="item-star star-container absolute right-0"></div>
@@ -22,7 +22,7 @@ export default class Restaurant {
         <div class="restaurant" id=${name}>
         <div class="restaurant__category">
           <img
-            src="./category-${translateCategory[category]}.png"
+            src="./category-${TRANSLATE_CATEGORY[category]}.png"
             alt="${category}"
             class="category-icon"
           />

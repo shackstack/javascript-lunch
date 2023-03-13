@@ -17,7 +17,7 @@ export default class App {
   }
 
   template() {
-    return `
+    return /*html*/ `
       <header class="gnb"></header>
       <main>
         <section class="tab-bar p-16 w-full"></section>

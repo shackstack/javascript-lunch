@@ -10,7 +10,7 @@ export default class Filter {
 
   template() {
     const { category, sortingWay } = this.props;
-    return `
+    return /*html*/ `
             <select name="category" id="category-filter" class="restaurant-filter">
               <option value="전체" ${category === "전체" ? "selected" : ""}>전체</option>
               <option value="한식" ${category === "한식" ? "selected" : ""}>한식</option>

@@ -12,7 +12,7 @@ export default class AddForm {
   }
 
   template() {
-    return `
+    return /*html*/ `
         <h2 class="modal-title text-title">새로운 음식점</h2>
         <form id="add-restaurant-form">
           <!-- 카테고리 -->

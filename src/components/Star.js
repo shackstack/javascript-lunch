@@ -12,7 +12,7 @@ export default class Star {
 
   template() {
     const { stared } = this.props;
-    return `<img src="./favorite-icon-${stared ? "filled" : "lined"}.png" class="star-icon" />`;
+    return /*html*/ `<img src="./favorite-icon-${stared ? "filled" : "lined"}.png" class="star-icon" />`;
   }
 
   render() {

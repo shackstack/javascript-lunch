@@ -12,7 +12,7 @@ export default class Modal {
   }
 
   template() {
-    return `
+    return /*html*/ `
         <div class="modal-backdrop"></div>
         <div class="modal-container"></div>
         `;

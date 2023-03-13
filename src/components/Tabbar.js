@@ -10,7 +10,7 @@ export default class Tabbar {
   }
 
   template() {
-    return `
+    return /*html*/ `
   <ul class="flex justify-around">
     <li id="all-restaurants" class="text-subtitle underline flex justify-center p-16">
       모든 음식점

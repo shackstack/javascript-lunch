@@ -13,7 +13,7 @@ export default class RestaurantList {
   }
 
   template() {
-    return `
+    return /*html*/ `
       <ul class="restaurant-list">
       </ul>
     `;
