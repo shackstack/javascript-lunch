@@ -1,4 +1,4 @@
-import { TRANSLATE_CATEGORY } from "../constant/variables";
+import { CLASS, TRANSLATE_CATEGORY } from "../constant/variables";
 import { addEvent } from "../util/addEvent";
 import store from "../util/store";
 import Star from "./Star";
@@ -57,7 +57,7 @@ export default class RestaurantDetail {
 
     const $quitButton = this.$target.querySelector("#quit-button");
     addEvent($quitButton, "click", () => {
-      $modal.classList.toggle("modal--open");
+      $modal.classList.toggle(CLASS.MODAL_OPEN);
     });
 
     const $removeButton = this.$target.querySelector("#remove-button");
@@ -65,7 +65,7 @@ export default class RestaurantDetail {
       const list = store.getLocalStorage();
       const updatedList = list.filter((obj) => obj.name !== name);
       store.setLocalStorage(updatedList);
-      $modal.classList.toggle("modal--open");
+      $modal.classList.toggle(CLASS.MODAL_OPEN);
       render();
     });
   }

@@ -1,4 +1,4 @@
-import { TRANSLATE_CATEGORY } from "../constant/variables";
+import { CLASS, TRANSLATE_CATEGORY } from "../constant/variables";
 import Modal from "./Modal";
 import Star from "./Star";
 
@@ -57,7 +57,7 @@ export default class Restaurant {
     this.$restaurantItem = this.$target.querySelector(`#${name}`);
     this.$restaurantItem.addEventListener("click", () => {
       new Modal(this.$modal, { ...this.props, content: "restaurantDetail", render });
-      this.$modal.classList.toggle("modal--open");
+      this.$modal.classList.toggle(CLASS.MODAL_OPEN);
     });
   }
 }
